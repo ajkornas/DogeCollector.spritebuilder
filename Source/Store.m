@@ -29,7 +29,7 @@ long double _doge;
     _doge -= 10;
     hashRate += 400000000000000;
     dogeAmountStore.string = [NSString stringWithFormat:@"%.2Lf", _doge];
-    [self didLoadFromCCB];
+    [self didLoadFromCCB];s
     }
 }
 
