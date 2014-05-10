@@ -10,6 +10,7 @@
 
 extern long double hashRate;
 extern int *addHash;
+extern long double totalDogeMined;
 
 @interface MainScene : CCNode
 

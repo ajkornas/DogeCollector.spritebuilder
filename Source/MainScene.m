@@ -7,13 +7,9 @@
 //
 
 #import "MainScene.h"
-#import "Store.h"
+#import "Shopp.h"
 #import "Upgrades.h"
 #import "Stats.h"
-
-
-long double randomCounter;
-
 
 NSTimer *animTimer;
 NSTimer *_mineTime;
@@ -38,8 +34,7 @@ extern int labPay;
 extern int moonPay;
 extern int timePay;
 
-extern long double totalMined;
-extern long double totalSpent;
+long double totalMined;
 
 @implementation MainScene {
     CCLabelTTF *dogeAmount;
@@ -64,7 +59,6 @@ extern long double totalSpent;
                                                    repeats:YES];
     
     
-    _upgradePrice = (_mouseLvl * 400);
     mouseLvlLabel.string = [NSString stringWithFormat:@"%d", _mouseLvl];
     upgradePriceLabel.string = [NSString stringWithFormat:@"%d", _upgradePrice];
         [self calcBonusPay];
@@ -92,13 +86,13 @@ extern long double totalSpent;
     _payout = (hashRate / 400);
     _doge += _payout;
     dogeAmount.string = [NSString stringWithFormat:@"%.2LF", _doge];
-    totalMined += _payout;
+    totalDogeMined += _payout;
     } else {
         _payout = 1;
         _doge += _payout;
         dogeAmount.string = [NSString stringWithFormat:@"%.2LF", _doge];
         Notify.string = [NSString stringWithFormat:@"%.2LF", _payout];
-        totalMined+= _payout;
+        totalDogeMined+= _payout;
     }
 }
 
@@ -114,11 +108,11 @@ extern long double totalSpent;
     _doge++;
     _doge += _bonusClickPay;
     dogeAmount.string = [NSString stringWithFormat:@"%.2LF", _doge];
-    totalMined += 1 + _bonusClickPay;
+    totalDogeMined += 1 + _bonusClickPay;
     [self launchDoge];
 }
 
--(void)Store {
+-(void)Store2 {
     if (_mineTime) {
         [_mineTime invalidate];
         _mineTime = nil;
@@ -131,8 +125,8 @@ extern long double totalSpent;
         [animTimer invalidate];
         animTimer = nil;
     }
-    CCScene *storeScene = [CCBReader loadAsScene:@"Store"];
-    [[CCDirector sharedDirector] replaceScene:storeScene];
+    CCScene *shopScene = [CCBReader loadAsScene:@"Shopp"];
+    [[CCDirector sharedDirector] replaceScene:shopScene];
 }
 
 -(void)test {

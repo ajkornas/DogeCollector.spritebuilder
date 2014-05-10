@@ -37,7 +37,7 @@
 	<key>publishAudioQuality_ios</key>
 	<integer>4</integer>
 	<key>publishDirectory</key>
-	<string>Source/Resources/Published-iOS</string>
+	<string>../../../../Documents/Applications/DogeCollector.spritebuilder/Source/Resources/Published-iOS</string>
 	<key>publishDirectoryAndroid</key>
 	<string>Source/Resources/Published-Android</string>
 	<key>publishDirectoryHTML5</key>
@@ -92,6 +92,11 @@
 		<dict>
 			<key>isSmartSpriteSheet</key>
 			<true/>
+		</dict>
+		<key>DogeAssets/buy button.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
 		</dict>
 		<key>DogeAssets/tiny-dogecoin.png</key>
 		<dict/>
@@ -186,8 +191,8 @@
 		</dict>
 	</dict>
 	<key>versionStr</key>
-	<string>Version: 1.0.3
-GitHub: 9026dcdd50
+	<string>Version: 1.0.6
+GitHub: 2a1e3712de
 </string>
 </dict>
 </plist>

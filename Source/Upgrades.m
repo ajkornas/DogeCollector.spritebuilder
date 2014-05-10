@@ -7,7 +7,7 @@
 //
 
 #import "Upgrades.h"
-#import "Store.h"
+#import "Shopp.h"
 
 
 @implementation Upgrades {

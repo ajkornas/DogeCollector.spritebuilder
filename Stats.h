@@ -8,8 +8,6 @@
 
 #import "CCNode.h"
 
-long double totalMined;
-
 @interface Stats : CCNode
 
 @end
